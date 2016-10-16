@@ -59,7 +59,7 @@ body {
 .banner {
 	height: 70px;
 	background-color: #3c4446;
-	margin-bottom: 20px;
+	margin-bottom: 200px;
 }
 
 .bannertext {
@@ -69,6 +69,8 @@ body {
 	font-weight: bold;
 	color:white;
 	font-size:25px;
+    
+    margin-top: 0px;
 }
 .bannertext span {
 	color: #d6441b;
@@ -86,13 +88,13 @@ body {
 
 .homesection {
 	text-align:center;
-	margin-top:40px;
+	margin-top:140px;
 }
 
 .node {
 	padding-top: 20px;
 	text-align:center;
-	margin-bottom:40px;
+	margin-bottom:120px;
 }
 .node #chat {
 	font-family: 'Open Sans Condensed';
@@ -500,14 +502,14 @@ body {
 	float:right;
 }
 
-.chats .me p {
-	text-align:left;
+.chats p {
+    text-align:left;
 	float: left;
 	display: inline-block;
-	margin-left: 20px;
+	
 	margin-bottom:30px;
-	padding: 25px 34px;
-	min-width: 160px;
+	padding: 5px 10px;
+	min-width: 100px;
 	min-height: 10px;
 	max-width: 510px;
 	background-color: #FFF;
@@ -517,12 +519,32 @@ body {
 	line-height: 1.4;
 	word-wrap: break-word;
 }
-
-.chats .you p {
-	text-align:left;
+.chats .me p {
+	margin-left: 20px;
+    /*text-align:left;
 	float: left;
 	display: inline-block;
+	
+	margin-bottom:30px;
+	padding: 5px 10px;
+	min-width: 100px;
+	min-height: 10px;
+	max-width: 510px;
+	background-color: #FFF;
+	border-radius: 3px;
+	box-shadow: 0px 3px 3px #E3E4E6;
+	color: #637277;
+	line-height: 1.4;
+	word-wrap: break-word;*/
+}
+
+.chats .you p {
 	margin-right:20px;
+    
+    /*text-align:left;
+	float: left;
+	display: inline-block;
+	
 	margin-bottom:30px;
 	padding: 25px 34px;
 	min-width: 160px;
@@ -533,7 +555,7 @@ body {
 	box-shadow: 0px 3px 3px #E3E4E6;
 	color: #637277;
 	line-height: 1.4;
-	word-wrap: break-word;
+	word-wrap: break-word;*/
 }
 
 .image b {
@@ -559,27 +581,31 @@ footer {
 	bottom:0;
 	left:0;
 	width:100%;
-	padding-top: 30px;
+	padding: 15px 0px;
 	background-color: white;
-	height: 130px;
+	/*height: 130px;*/
+}
+footer.container {
+    padding: 0px;
 }
 #chatform {
-	width:700px;
+	width:100%;/*700px;*/
 	margin: 0 auto;
 	background-color: white;
 }
 
 #message {
-	width: 550px;
+	width: 100%;/*550px;*/
 	height: 80px;
 	display: block;
 	float:left;
-	margin: 0 auto;
+	/*margin: 10px;*/
 	background-color: #f9f9f9;
 	border: 1px solid #cccccc;
 	border-radius: 2px;
-	padding-left: 20px;
-	padding-top: 20px;
+	padding: 5px;
+    /*padding-left: 20px;
+	padding-top: 20px;*/
 	resize: none;
 	font:inherit;
 	color:inherit;
@@ -591,7 +617,7 @@ footer {
 	float:right;
 	text-align:center;
 	background-color: #73b4d4;
-	display: block;
+	display: none;/*block;*/
 	margin: 0 auto;
 	border: none;
 	box-shadow: 3px 3px 3px #efedee;
@@ -639,7 +665,7 @@ footer {
 
 .chatscreen{
 	display:none;
-	width:700px;
+	/*width:700px;*/
 	margin: 0 auto 200px;
 	overflow:hidden;
 }
