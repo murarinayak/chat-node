@@ -7,136 +7,150 @@
 -->
 
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Private chat room | m2n Chat</title>
-    </head>
 
-    <body>
-        <header class="banner">
-            <h1 class="bannertext">
-                <a href="http://www.murarim.com/" id="logo">m2n<span>Chat</span></a>
-            </h1>
-        </header>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Private chat room | m2n Chat</title>
+</head>
 
-        <section class="container section">
+<body>
+    <header class="banner">
+        <h1 class="bannertext">
+            <a href="http://www.murarinayak.com/" id="logo">m2n<span>Chat</span></a>
+        </h1>
+    </header>
 
-            <!-- These elements are displayed as white info cards in the middle of the screen -->
+    <section class="container section mt-4">
 
-            <div class="row connected col-sm-6 col-sm-offset-3">
-                <div class="col-sm-12">
-                    <img src="../img/unnamed.jpg" id="creatorImage" />
-                </div>
-                <div class="infoConnected col-sm-12">
-                    <h2>Who are you?</h2>
-                    <br/>
+        <!-- These elements are displayed as white info cards in the middle of the screen -->
 
-                    <form class="loginForm">
-                        <input type="text" id="yourName" class="form-control" placeholder="Your nick name" /><br/>
-                        <input type="text" id="yourEmail" class="form-control" placeholder="Your email address" /><br/>
-                        <input type="submit" id="yourEnter" value="ENTER" />
-                    </form>
+        <div class="row connected col-sm-6 offset-3">
+            <div class="col-sm-12">
+                <img src="../img/unnamed.jpg" id="creatorImage" />
+            </div>
+            <div class="infoConnected col-sm-12">
+                <h2>Who are you?</h2>
+                <br />
 
-                </div>
+                <form class="loginForm">
+                    <input type="text" id="yourName" class="form-control" placeholder="Your nick name" /><br />
+                    <input type="text" id="yourEmail" class="form-control" placeholder="Your email address" /><br />
+                    <input type="submit" id="yourEnter" value="ENTER" />
+                </form>
 
             </div>
 
-            <div class="personinside col-lg-12 col-sm-12">
-                <img src="../img/unnamed.jpg" id="ownerImage" class="col-sm-6"/>
-                <div class="infoInside col-lg-6">
-                    <h2>Chat with <span class="nickname-chat"></span></h2>
-                    <br/>
+        </div>
 
-                    <form class="loginForm">
-                        <input type="text" id="hisName" placeholder="Your nick name" /><br/>
-                        <input type="text" id="hisEmail" placeholder="Your email address" /><br/>
-                        <input type="submit" id="hisEnter" value="CHAT" />
-                    </form>
+        <div class="personinside row col-sm-8 offset-2">
+            <div class="col-sm-12">
+                <img src="../img/unnamed.jpg" id="ownerImage"/>
+            </div>
+            <div class="infoInside col-sm-12">
+                <h2>Chat with <span class="nickname-chat"></span></h2>
+                <br />
 
-                </div>
+                <form class="loginForm">
+                    <!-- <div class="form-control"> -->
+                        <input type="text" id="hisName_" class="form-control" placeholder="Your nick name" /><br />
+                    <!-- </div>
+                    <div class="form-control"> -->
+                        <input type="text" id="hisEmail_" class="form-control" placeholder="Your email address" /><br />
+                    <!-- </div> -->
+                    <input type="submit" id="hisEnter" value="CHAT" />
+
+                </form>
 
             </div>
+        </div>
+        <div class="invite-textfield">
 
-            <div class="invite-textfield">
+            <h2>Oops, there are no other people in this chat!</h2>
+            <h5>Invite a friend by sending them this URL</h5>
 
-                <h2>Oops, there are no other people in this chat!</h2>
-                <h5>Invite a friend by sending them this URL</h5>
-
-                <div class="link">
-                    <a title="Invite a friend" href="" id="link"></a>
-                </div>
-
+            <div class="link">
+                <a title="Invite a friend" href="" id="link"></a>
             </div>
 
-            <div class="left">
+        </div>
 
-                <img src="../img/unnamed.jpg" id="leftImage" />
+        <div class="left">
 
-                <div class="info">
-                    <h2><span class="nickname-left"></span> has left this chat.</h2>
-                    <h5>Invite somebody else by sending them this page.</h5>
-                </div>
+            <img src="../img/unnamed.jpg" id="leftImage" />
 
+            <div class="info">
+                <h2><span class="nickname-left"></span> has left this chat.</h2>
+                <h5>Invite somebody else by sending them this page.</h5>
             </div>
 
-            <div class="toomanypeople">
+        </div>
 
-                <h2>Oops, you can not join this chat!</h2>
-                <h5>There are already two people in it. Would you like to create a <a title="New Room" href="/create" id="room">new room</a>?</h5>
+        <div class="toomanypeople">
 
+            <h2>Oops, you can not join this chat!</h2>
+            <h5>There are already two people in it. Would you like to create a <a title="New Room" href="/create"
+                    id="room">new room</a>?</h5>
+
+        </div>
+
+        <div class="nomessages col-sm-12">
+
+            <img src="../img/unnamed.jpg" id="noMessagesImage" />
+
+            <div class="info">
+                <h2>You are chatting with <span class="nickname-chat"></span>.</h2>
+                <h5>Send them a message from the form below!</h5>
             </div>
 
-            <div class="nomessages col-sm-12">
+        </div>
 
-                <img src="../img/unnamed.jpg" id="noMessagesImage" />
+        <div class="chatscreen col-sm-12">
 
-                <div class="info">
-                    <h2>You are chatting with <span class="nickname-chat"></span>.</h2>
-                    <h5>Send them a message from the form below!</h5>
-                </div>
+            <ul class="chats">
+                <!-- The chat messages will go here -->
+            </ul>
 
-            </div>
+        </div>
 
-            <div class="chatscreen col-sm-12">
+    </section>
 
-                <ul class="chats">
-                    <!-- The chat messages will go here -->
-                </ul>
+    <footer class="">
 
-            </div>
+        <form id="chatform" class="col-sm-12">
 
-        </section>
+            <textarea id="message" placeholder="Write something.."></textarea>
+            <!--<input type="submit" id="submit" value="SEND"/>-->
 
-        <footer class="">
+        </form>
 
-            <form id="chatform" class="col-sm-12">
+    </footer>
 
-                <textarea id="message" placeholder="Write something.."></textarea>
-                <!--<input type="submit" id="submit" value="SEND"/>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-            </form>
-
-        </footer>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-        <link type="text/css" rel="stylesheet" href="../css/stylesheet.css" />
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans Condensed:300italic,300,700" rel="stylesheet" type="text/css">
-
-        <script src="../js/moment.min.js"></script>
-        <script src="/socket.io/socket.io.js"></script>
-        <script src="../js/chat.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-    </body>
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script> -->
+
+    <link type="text/css" rel="stylesheet" href="../css/stylesheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans Condensed:300italic,300,700" rel="stylesheet"
+        type="text/css">
+
+    <script src="../js/moment.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/chat.js"></script>
+
+
+</body>
 
 </html>
