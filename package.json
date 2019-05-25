@@ -1,9 +1,11 @@
 {
-  "name": "NodeChatSystem",
+  "name": "node-chat-system",
   "version": "0.0.1",
-  "description": "Realtime chat system for Tutorialzine.com",
+  "description": "Realtime chat system",
   "main": "app.js",
   "scripts": {
+    "start:local": "nodemon ./app.js",
+    "start": "node ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,7 +13,7 @@
     "chat",
     "system"
   ],
-  "author": "Nikolay Anastasov",
+  "author": "Murari Nayak",
   "license": "MIT",
   "dependencies": {
     "ejs": "^2.0.0",
